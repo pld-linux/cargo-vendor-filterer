@@ -1,0 +1,27 @@
+--- cargo-vendor-filterer-0.5.12/src/tiers.rs.orig	2023-09-28 21:26:11.000000000 +0200
++++ cargo-vendor-filterer-0.5.12/src/tiers.rs	2023-10-04 11:57:37.661023469 +0200
+@@ -35,6 +35,24 @@
+     "x86_64-unknown-illumos",
+     "x86_64-unknown-linux-musl",
+     "x86_64-unknown-netbsd",
++    // Tier 2 linux platforms without host tools
++    "arm-unknown-linux-musleabi",
++    "arm-unknown-linux-musleabihf",
++    "armv5te-unknown-linux-gnueabi",
++    "armv5te-unknown-linux-musleabi",
++    "armv7-unknown-linux-gnueabi",
++    "armv7-unknown-linux-musleabi",
++    "armv7-unknown-linux-musleabihf",
++    "i586-unknown-linux-gnu",
++    "i586-unknown-linux-musl",
++    "i686-unknown-linux-musl",
++    "mips-unknown-linux-musl",
++    "mips64-unknown-linux-muslabi64",
++    "mips64el-unknown-linux-muslabi64",
++    "mipsel-unknown-linux-musl",
++    "sparc64-unknown-linux-gnu",
++    "thumbv7neon-unknown-linux-gnueabihf",
++    "x86_64-unknown-linux-gnux32",
+ ];
+ 
+ /// The possible values of select Rust platform "tiers".
