@@ -1,6 +1,7 @@
 %define		crates_ver	0.5.12
 
-Summary:	Tool to `cargo vendor` with filtering
+Summary:	Tool to "cargo vendor" with filtering
+Summary(pl.UTF-8):	Narzędzie do "cargo vendor" z filtrowaniem
 Name:		cargo-vendor-filterer
 Version:	0.5.12
 Release:	1
@@ -22,9 +23,15 @@ ExclusiveArch:	%{rust_arches}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The core cargo vendor tool is useful to save all dependencies.
+The core "cargo vendor" tool is useful to save all dependencies.
 However, it doesn't offer any filtering; today cargo includes all
 platforms, but some projects only care about Linux for example.
+
+%description -l pl.UTF-8
+Podstawowe narzędzie "cargo vendor" jest przydatne do zapisywania
+wszystkich zależności. Jednak nie oferuje żadnego filtrowania;
+obecnie cargo obejmuje wszystkie platformy, ale niektóre projekty
+wymagają np. tylko linuksowych.
 
 %prep
 %setup -q -a1
