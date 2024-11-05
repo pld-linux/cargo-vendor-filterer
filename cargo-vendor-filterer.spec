@@ -1,16 +1,16 @@
-%define		crates_ver	0.5.14
+%define		crates_ver	0.5.16
 
 Summary:	Tool to "cargo vendor" with filtering
 Summary(pl.UTF-8):	Narzędzie do "cargo vendor" z filtrowaniem
 Name:		cargo-vendor-filterer
-Version:	0.5.14
+Version:	0.5.16
 Release:	1
 License:	Apache v2.0
 Group:		Applications
 Source0:	https://github.com/coreos/cargo-vendor-filterer/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f5b9df9adc3c9d05c5ad62529fe354f7
+# Source0-md5:	696e453744cd0df6929f33cf266400f2
 Source1:	%{name}-crates-%{crates_ver}.tar.xz
-# Source1-md5:	50b2333addd302068eb42b256e8ef8e0
+# Source1-md5:	ecee122002e020de195b5b9e88a72e7d
 Patch0:		tier2-platforms-without-host-tools.patch
 URL:		https://github.com/coreos/cargo-vendor-filterer
 BuildRequires:	cargo
