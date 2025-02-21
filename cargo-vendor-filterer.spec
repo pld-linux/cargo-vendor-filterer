@@ -37,7 +37,7 @@ wymagają np. tylko linuksowych.
 
 %prep
 %setup -q -a1
-%patch0 -p1
+%patch -P0 -p1
 
 %{__mv} %{name}-%{crates_ver}/* .
 sed -i -e 's/@@VERSION@@/%{version}/' Cargo.lock
