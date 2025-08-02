@@ -1,16 +1,16 @@
-%define		crates_ver	0.5.16
+%define		crates_ver	0.5.18
 
 Summary:	Tool to "cargo vendor" with filtering
 Summary(pl.UTF-8):	Narzędzie do "cargo vendor" z filtrowaniem
 Name:		cargo-vendor-filterer
-Version:	0.5.17
+Version:	0.5.18
 Release:	1
 License:	Apache v2.0
 Group:		Applications
 Source0:	https://github.com/coreos/cargo-vendor-filterer/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	8fe5a32ea0a4456f250a885db8fb8ce0
+# Source0-md5:	fa5e8e4c56ba81b12adf70bcb984e855
 Source1:	%{name}-crates-%{crates_ver}.tar.xz
-# Source1-md5:	ecee122002e020de195b5b9e88a72e7d
+# Source1-md5:	3a187bef2982d868e3afefe3ac895af1
 Patch0:		tier2-platforms-without-host-tools.patch
 URL:		https://github.com/coreos/cargo-vendor-filterer
 BuildRequires:	cargo
@@ -65,7 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 export CARGO_HOME="$(pwd)/.cargo"
 
 %cargo_install --frozen --root $RPM_BUILD_ROOT%{_prefix} --path $PWD
-%{__rm} $RPM_BUILD_ROOT%{_prefix}/.crates*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
