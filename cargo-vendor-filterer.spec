@@ -15,10 +15,11 @@ Patch0:		tier2-platforms-without-host-tools.patch
 URL:		https://github.com/coreos/cargo-vendor-filterer
 BuildRequires:	cargo
 BuildRequires:	openssl-devel
-BuildRequires:	rpmbuild(macros) >= 2.004
+BuildRequires:	rpmbuild(macros) >= 2.050
 BuildRequires:	rust
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+%{?rust_req}
 Requires:	cargo
 Requires:	rust
 ExclusiveArch:	%{rust_arches}
