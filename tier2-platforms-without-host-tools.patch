@@ -1,6 +1,6 @@
 --- cargo-vendor-filterer-0.5.12/src/tiers.rs.orig	2023-09-28 21:26:11.000000000 +0200
 +++ cargo-vendor-filterer-0.5.12/src/tiers.rs	2023-10-04 11:57:37.661023469 +0200
-@@ -35,6 +35,24 @@
+@@ -35,6 +35,22 @@
      "x86_64-unknown-illumos",
      "x86_64-unknown-linux-musl",
      "x86_64-unknown-netbsd",
@@ -15,10 +15,8 @@
 +    "i586-unknown-linux-gnu",
 +    "i586-unknown-linux-musl",
 +    "i686-unknown-linux-musl",
-+    "mips-unknown-linux-musl",
-+    "mips64-unknown-linux-muslabi64",
-+    "mips64el-unknown-linux-muslabi64",
-+    "mipsel-unknown-linux-musl",
++    "riscv64a23-unknown-linux-gnu",
++    "riscv64gc-unknown-linux-musl",
 +    "sparc64-unknown-linux-gnu",
 +    "thumbv7neon-unknown-linux-gnueabihf",
 +    "x86_64-unknown-linux-gnux32",
