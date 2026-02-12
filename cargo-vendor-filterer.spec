@@ -4,7 +4,7 @@ Summary:	Tool to "cargo vendor" with filtering
 Summary(pl.UTF-8):	Narzędzie do "cargo vendor" z filtrowaniem
 Name:		cargo-vendor-filterer
 Version:	0.5.18
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Applications
 Source0:	https://github.com/coreos/cargo-vendor-filterer/archive/v%{version}/%{name}-%{version}.tar.gz
@@ -12,6 +12,7 @@ Source0:	https://github.com/coreos/cargo-vendor-filterer/archive/v%{version}/%{n
 Source1:	%{name}-crates-%{crates_ver}.tar.xz
 # Source1-md5:	3a187bef2982d868e3afefe3ac895af1
 Patch0:		tier2-platforms-without-host-tools.patch
+Patch1:		missing-packages.patch
 URL:		https://github.com/coreos/cargo-vendor-filterer
 BuildRequires:	cargo
 BuildRequires:	openssl-devel
@@ -39,6 +40,7 @@ wymagają np. tylko linuksowych.
 %prep
 %setup -q -a1
 %patch -P0 -p1
+%patch -P1 -p1
 
 %{__mv} %{name}-%{crates_ver}/* .
 sed -i -e 's/@@VERSION@@/%{version}/' Cargo.lock
